@@ -342,22 +342,20 @@ if (document.getElementById("compare-btn")) {
 
     // Descrições para tooltip da tabela comparativa
     const algoDescriptions = {
-      FIFO: "First In, First Out: executa na ordem de chegada",
-      SJF: "Shortest Job First: executa o processo com menor burst",
-      RoundRobin:
-        "Executa por fatias de tempo (quantum), alternando processos (preemptivo)",
-      Prioridade:
-        "Executa primeiro processos com maior prioridade (menor valor numérico)",
+      FIFO: "First In, First Out: executa na ordem de chegada, sem preempção",
+      SJF: "Shortest Job First: executa o processo com menor burst, sem preempção",
+      RoundRobin: "Executa por fatias de tempo (quantum), alternando processos (preemptivo)",
+      Prioridade: "Executa primeiro processos com maior prioridade (menor valor numérico), sem preempção",
     };
 
     // Monta tabela de comparação entre algoritmos
     let html = `<h3>Resumo comparativo com todas as métricas dos algoritmos</h3>
         <table>
             <tr>
-                <th>Algoritmo</th>
-                <th>Espera Média</th>
-                <th>Turnaround Médio</th>
-                <th>Resposta Média</th>
+                <th title="Escalonador de processos">Algoritmo</th>
+                <th title="Tempo médio que os processos esperaram antes de serem executados (turnaround - burst)">Espera Média</th>
+                <th title="Tempo total médio entre a chegada e a finalização dos processos (burst - chegada)">Turnaround Médio</th>
+                <th title="Tempo médio até a primeira resposta dos processos (primeira execução - chegada)">Resposta Média</th>
             </tr>`;
     
     for (let algo in comparisons) {
