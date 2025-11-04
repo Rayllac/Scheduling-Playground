@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simulações | Algoritmos de Escalonamento de Processos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Algoritmos de Escalonamento de Processos</h1>
+
+    <div class="simulations-container">
+      <!-- Simulação 1 -->
+      <section class="simulation-section">
+        <h2>Simulação 1</h2>
+        <label for="algorithm1">Algoritmo:</label>
+        <select id="algorithm1">
+          <option value="FIFO">FIFO</option>
+          <option value="SJF">SJF</option>
+          <option value="RoundRobin">Round Robin</option>
+          <option value="Prioridade">Prioridade</option>
+        </select>
+        <label for="quantum1">Quantum (apenas RR):</label>
+        <input type="number" id="quantum1" value="2" min="1" />
+
+        <button id="simulate-btn-1">Rodar Simulação 1</button>
+        <button id="edit-btn1">Editar Processos</button>
+        <canvas id="gantt1" width="600" height="120"></canvas>
+        <div id="results1"></div>
+      </section>
+
+      <!-- Simulação 2 -->
+      <section class="simulation-section">
+        <h2>Simulação 2</h2>
+        <label for="algorithm2">Algoritmo:</label>
+        <select id="algorithm2">
+          <option value="FIFO">FIFO</option>
+          <option value="SJF">SJF</option>
+          <option value="RoundRobin">Round Robin</option>
+          <option value="Prioridade">Prioridade</option>
+        </select>
+        <label for="quantum2">Quantum (apenas RR):</label>
+        <input type="number" id="quantum2" value="2" min="1" />
+
+        <button id="simulate-btn-2">Rodar Simulação 2</button>
+        <button id="edit-btn2">Editar Processos</button>
+        <canvas id="gantt2" width="600" height="120"></canvas>
+        <div id="results2"></div>
+      </section>
+    </div>
+
+    <section class="compare-section">
+      <button id="compare-btn">Comparar Algoritmos</button>
+      <div id="comparison"></div>
+    </section>
+
+    <script src="js/algorithms.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

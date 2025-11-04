@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dados de Entrada | Algoritmos de Escalonamento de Processos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Algoritmos de Escalonamento de Processos</h1>
+
+    <!-- Entrada de processos -->
+    <section class="input-section">
+      <h3>Configure os dados de entrada para analisar os algoritmos</h3>
+      <form id="process-form">
+        <label>ID: <input type="text" id="pid" /></label>
+        <label>Chegada: <input type="number" id="arrival" /></label>
+        <label>Duração: <input type="number" id="burst" /></label>
+        <label>Prioridade: <input type="number" id="priority" /></label>
+        <button type="submit">Adicionar Processo</button>
+      </form>
+
+      <table id="process-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Chegada</th>
+            <th>Duração</th>
+            <th>Prioridade</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- Botões de controle -->
+      <div class="buttons">
+        <button id="clear-btn" title="Remove todos os processos da lista">Limpar Processos</button>
+        <button id="reload-btn" title="Recarrega os processos iniciais">Recarregar Processos</button>
+        <button id="go-simulations-btn" title="Avança para a página de simulações">Ir para Simulações</button>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

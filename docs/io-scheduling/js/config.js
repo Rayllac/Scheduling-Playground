@@ -1,0 +1,8 @@
+export const CONFIGURACOES = {
+  VELOCIDADE_ANIMACAO: 1000,
+  DURACAO_TRANSICAO: 180,
+  TAMANHO_PADRAO: 50,
+  POSICAO_INICIAL_PADRAO: 25
+};
+
+export const STORAGE_KEY = 'escalonamentoIOEstado';

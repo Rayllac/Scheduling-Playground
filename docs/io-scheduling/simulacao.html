@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulações | Algoritmos de Escalonamento I/O</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="simulacao">
+  <div class="container">
+    <h1>Simulações de Escalonamento I/O</h1>
+    <p class="subtitle">Visualize o comportamento dos algoritmos com os dados configurados</p>
+
+    <div class="simulacao-header">
+      <div class="header-info">
+        <div class="header-item">
+          <span class="summary-label">Disco</span>
+          <span class="summary-value" id="resumoTamanho">-</span>
+        </div>
+        <div class="header-item">
+          <span class="summary-label">Cabeça</span>
+          <span class="summary-value" id="resumoCabeca">-</span>
+        </div>
+        <div class="header-item">
+          <span class="summary-label">Requisições</span>
+          <span class="summary-value" id="resumoRequisicoes">0</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="sucess" id="backToEntrada">Editar dados</button>
+      </div>
+    </div>
+
+    <div class="requests-bar requests-display" id="requestsDisplay">
+      <strong>Requisições:</strong> <em>Nenhuma ainda. Adicione algumas!</em>
+    </div>
+
+    <div class="controls simulacao-controls">
+      <div class="control-section simulacao-panel">
+        <h3>Escolha o algoritmo</h3>
+        <div class="page-actions">
+          <button class="sucess" id="btnRunSSTF">SSTF - Mais Próximo</button>
+          <button class="sucess" id="btnRunSCAN">SCAN - Elevador</button>
+          <button class="sucess" id="btnRunCSCAN">C-SCAN - Circular</button>
+          <button class="sucess" id="btnCompareAll">Comparar Todos</button>
+        </div>
+
+        <div id="alertaSemDados" class="alert-info">
+          <strong>Nenhuma requisição cadastrada.</strong> Volte para a página de entrada para informar os dados antes de iniciar as simulações.
+        </div>
+
+        <div class="simulacao-layout">
+          <div class="simulacao-visual simulacao-card">
+            <div class="disk-visualization">
+              <div id="diskLine"></div>
+              <div id="head"></div>
+            </div>
+
+            <div id="algoritmoDescricao" class="alg-desc"></div>
+          </div>
+
+          <div class="results simulacao-card" id="results" style="display: none;">
+            <h3>Resultados da Simulação</h3>
+            <div id="algoritmoresults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
